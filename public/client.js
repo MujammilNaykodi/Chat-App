@@ -1,7 +1,6 @@
-
 const socket = io()
 let name;
-let textarea = document.querySelector('#textarea')//for sending message when enter key is pressed
+let textarea = document.querySelector('#textarea')
 let messageArea = document.querySelector('.message__area')
 do {
     name = prompt('Please enter your name: ')
@@ -9,7 +8,7 @@ do {
 
 textarea.addEventListener('keyup', (e) => {
     if(e.key === 'Enter') {
-        sendMessage(e.target.value)///e--> is an event object and target.value is DOM property //e.target: This represents the DOM element that triggered the event. In the context of the event listener for the keyup event on the textarea, e.target would be the textarea element itself.
+        sendMessage(e.target.value)
     }
 })
 
@@ -52,4 +51,3 @@ function scrollToBottom() {
 }
 
 
- 
